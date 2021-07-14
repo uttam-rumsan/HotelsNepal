@@ -1,0 +1,27 @@
+{
+  "name": "uttam",
+  "version": "1.0.0",
+  "description": "My portfolio - All about me",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next -- -p 3020",
+    "build": "next build && next export",
+    "start": "next start"
+  },
+  "author": "EnvyTheme.com",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "next": "^10.0.9",
+    "next-videos": "^1.4.0",
+    "react": "^17.0.2",
+    "react-accessible-accordion": "^3.3.4",
+    "react-dom": "^17.0.2",
+    "react-image-lightbox": "^5.1.1",
+    "react-modal-video": "^1.2.6",
+    "react-owl-carousel3": "^2.2.5",
+    "react-particles-js": "^2.7.1",
+    "react-visibility-sensor": "^5.1.1",
+    "sass": "^1.32.8"
+  }
+}
