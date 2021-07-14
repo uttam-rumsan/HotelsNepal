@@ -41,8 +41,8 @@ class NavbarTwo extends Component {
                         <div className="container-fluid">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src="/images/uttam-logo-black.png" height={40} width={150} className="black-logo" alt="logo" />
-                                    <img src="/images/uttam-logo-white.png" height={40} width={150} className="white-logo" alt="logo" />
+                                    <img src="/images/hotelsnepalogo.png" height={40} width={150} className="black-logo" alt="logo" />
+                                    <img src="/images/hotelsnepal-logo-green.png" height={40} width={150} className="white-logo" alt="logo" />
                                 </a>
                             </Link>
 
