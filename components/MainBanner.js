@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-// import ModalVideo from 'react-modal-video';
+import ModalVideo from 'react-modal-video';
 
 class MainBanner extends Component {
 
@@ -14,44 +14,50 @@ class MainBanner extends Component {
     render() {
         return (
             <>
-                <div className="hero-banner it-banner overly hero-bg4">
+                <div className="hero-banner video-studio center overly-6">
+                    <div className="video-background">
+                        <video autoPlay loop src="/video/boudha.mp4" />
+                    </div>
+
                     <div className="d-table">
                         <div className="d-table-cell">
                             <div className="container">
-                                <div className="row align-items-center">
-                                    <div className="col-lg-6">
-                                        <div className="main-banner-content">
-                                            <h1>Hi, I'm Uttam Raj Giri</h1>
-                                            <p>You don't have to be great to start, but you have to start to be great.</p>
+                                <div className="main-banner-content">
+                                    <h1>Welcome to Nepal</h1>
 
-                                            <Link href="/contact">
-                                                <a className="btn btn-primary">About Us</a>
-                                            </Link>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-                                            <Link href="/contact">
-                                                <a className="btn btn-secondary">Our Team</a>
-                                            </Link>
-                                        </div>
-                                    </div>
+                                    <Link href="/contact">
+                                        <a className="btn btn-primary mr-0">Contact Us</a>
+                                    </Link>
+                                </div>
 
-                                    <div className="col-lg-6">
-                                        <div className="animate-banner-image">
-                                            <img src="/images/about-me.jpg" alt="Animate image" />
-                                        </div>
-                                    </div>
+                                <div className="video-box">
+                                    <Link href="/#play-video">
+                                        <a
+                                            onClick={e => { e.preventDefault(); this.openModal() }}
+                                            className="video-btn"
+                                        >
+                                            <i className="pe-7s-play"></i>
+                                        </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
+                {typeof window !== 'undefined' && (
+                    <>
+                        <ModalVideo
+                            channel='youtube'
+                            isOpen={this.state.isOpen}
+                            videoId='_ysd-zHamjk'
+                            onClose={() => this.setState({ isOpen: false })}
+                        />
+                    </>
+                )}
                 {/* If you want to change the video need to update below videoID */}
-                {/* <ModalVideo 
-                    channel='youtube' 
-                    isOpen={this.state.isOpen} 
-                    videoId='_ysd-zHamjk' 
-                    onClose={() => this.setState({isOpen: false})} 
-                /> */}
+
             </>
         );
     }
