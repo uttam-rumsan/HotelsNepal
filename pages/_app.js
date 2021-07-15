@@ -12,6 +12,8 @@ import App from 'next/app';
 import Head from 'next/head';
 // import Loader from '../components/Shared/Loader';
 import GoTop from '../components/Shared/GoTop';
+import Loader from '../components/Shared/Loader';
+
 
 export default class MyApp extends App {
   // Preloader
@@ -41,7 +43,7 @@ export default class MyApp extends App {
         <Component {...pageProps} />
 
         {/* Preloader */}
-        {/* <Loader loading={this.state.loading} /> */}
+        <Loader loading={this.state.loading} />
 
         {/* Go Top Button */}
         <GoTop />
