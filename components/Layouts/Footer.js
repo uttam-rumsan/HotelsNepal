@@ -139,7 +139,7 @@ class Footer extends Component {
 
                     <div className="copyright-area">
                         <div className="container">
-                            <p>Copyright &copy; {currentYear} Pungent. All Rights Reserved By <a href="https://envytheme.com" target="_blank">EnvyTheme</a></p>
+                            <p>Copyright &copy; {currentYear} Hotels In Nepal. All Rights Reserved By <a href="https://hotelsinnepal.vercel.app" target="_blank">Hotels In Nepal</a></p>
                         </div>
                     </div>
                 </footer>
