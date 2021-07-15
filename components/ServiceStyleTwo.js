@@ -1,195 +1,246 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
+const OwlCarousel = dynamic(import('react-owl-carousel3'));
 
-class ServiceStyleTwo extends Component {
+const options = {
+    loop: true,
+    nav: true,
+    dots: true,
+    autoplayHoverPause: true,
+    autoplay: true,
+    margin: 20,
+    navText: [
+        "<i class='pe-7s-angle-left'></i>",
+        "<i class='pe-7s-angle-right'></i>"
+    ],
+    responsive: {
+        0: {
+            items: 1
+        },
+        576: {
+            items: 2
+        },
+        1000: {
+            items: 3
+        },
+        1200: {
+            items: 4
+        },
+        1800: {
+            items: 5
+        }
+    }
+}
+
+class OurWorks extends Component {
+
+    _isMounted = false;
+    state = {
+        display: false
+    }
+    componentDidMount() {
+        this._isMounted = true;
+        this.setState({ display: true })
+    }
+    componentWillUnmount() {
+        this._isMounted = false;
+    }
+
     render() {
         return (
             <>
-                <div className="service-style-two ptb-100 bg-fcfbfb">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="service-info pr-50">
-                                    <div className="info-head">
-                                        <h2 className="title">Web & Mobile Development</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                                    </div>
-
-                                    <div className="row">
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Responsive Design
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Mobile App Development
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                React Web Development
-                                            </div>
-                                        </div>
-
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                UI / UX Design
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Laravel Web Development
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Angular Web Development
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="service-read-more">
-                                        <Link href="/service-details">
-                                            <a className="btn btn-primary">
-                                                <i className="icofont-tasks"></i> Read more
-                                            </a>
-                                        </Link>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="col-lg-6">
-                                <div className="service-right-img">
-                                    <img src="/images/services/it-service1.png" alt="Service Image" />
-                                </div>
-                            </div>
+                <section className="case-studies-area ptb-100">
+                    <div className="container-fluid">
+                        <div className="section-title">
+                            <h2>Our Projects</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         </div>
-                    </div>
-                </div>
 
-                <div className="service-style-two ptb-100">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="service-left-img">
-                                    <img src="/images/services/it-service2.png" alt="Service Image" />
-                                </div>
-                            </div>
+                        {this.state.display ? <OwlCarousel
+                            className="work-slides owl-carousel owl-theme"
+                            {...options}
+                        >
+                            <div className="work-card">
+                                <img src="/images/works/work1.jpg" alt="image" />
 
-                            <div className="col-lg-6">
-                                <div className="service-info pl-50">
-                                    <div className="info-head">
-                                        <h2 className="title">Digital Marketing</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                                    </div>
-
-                                    <div className="row">
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                SEO Marketing
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Facebook Marketing
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Social Marketing
-                                            </div>
-                                        </div>
-
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Email Marketing
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Data Scraping
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Youtube Marketing
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="service-read-more">
-                                        <Link href="/service-details">
-                                            <a className="btn btn-primary">
-                                                <i className="icofont-tasks"></i> Read more
-                                            </a>
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Development</a>
                                         </Link>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    </span>
 
-                <div className="service-style-two ptb-100 bg-fcfbfb">
-                    <div className="container">
-                        <div className="row align-items-center">
-                            <div className="col-lg-6">
-                                <div className="service-info pr-50">
-                                    <div className="info-head">
-                                        <h2 className="title">Cloud Hosting Services</h2>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                                    </div>
-
-                                    <div className="row">
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Cloud Databases
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Email Servers
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                File Storage
-                                            </div>
-                                        </div>
-
-                                        <div className="col-sm-6">
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Hybrid Cloud
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Website Hosting
-                                            </div>
-                                            <div className="feature-list">
-                                                <i className="icofont-check-circled"></i>
-                                                Backup Systems
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div className="service-read-more">
-                                        <Link href="/service-details">
-                                            <a className="btn btn-primary">
-                                                <i className="icofont-tasks"></i> Read more
-                                            </a>
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Designing a better cinema experience</a>
                                         </Link>
-                                    </div>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
                                 </div>
                             </div>
 
-                            <div className="col-lg-6">
-                                <div className="service-right-img">
-                                    <img src="/images/services/it-service3.png" alt="Service Image" />
+                            <div className="work-card">
+                                <img src="/images/works/work2.jpg" alt="image" />
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Web Design</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Building design process within teams</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
                                 </div>
                             </div>
-                        </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work3.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>eCommerce</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>How intercom brings play eCommerce</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work4.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Reactjs</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>How to start a project with Reactjs</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work5.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Angular js</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Examples of different types of sprints</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work6.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>UI/UX Design</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Redesigning the New York times app</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work7.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Graphic Design</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Design the Web, Mobile, and eCommerce</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+
+                            <div className="work-card">
+                                <img src="/images/works/work8.jpg" alt="image" />
+
+                                <div className="content text-center">
+                                    <span>
+                                        <Link href="/portfolio">
+                                            <a>Bootstrap</a>
+                                        </Link>
+                                    </span>
+
+                                    <h3>
+                                        <Link href="/portfolio-details">
+                                            <a>Redesigning the New York times app</a>
+                                        </Link>
+                                    </h3>
+
+                                    <Link href="/portfolio-details">
+                                        <a className="custom-btn">Read More</a>
+                                    </Link>
+                                </div>
+                            </div>
+                        </OwlCarousel> : ''}
                     </div>
-                </div>
+                </section>
             </>
         );
     }
 }
 
-export default ServiceStyleTwo;
+export default OurWorks;

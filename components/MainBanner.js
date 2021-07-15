@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Link from 'next/link';
-import ModalVideo from 'react-modal-video';
 
 class MainBanner extends Component {
 
@@ -23,40 +22,19 @@ class MainBanner extends Component {
                         <div className="d-table-cell">
                             <div className="container">
                                 <div className="main-banner-content">
-                                    <h1>Welcome to Nepal</h1>
+                                    <h1>Welcome to <br />Hotels in Nepal</h1>
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>We aim to provide complete information about the best hotels available in Nepal, including luxury hotels, boutique hotels, and budget hotels.</p>
 
-                                    <Link href="/contact">
-                                        <a className="btn btn-primary mr-0">Contact Us</a>
-                                    </Link>
-                                </div>
-
-                                <div className="video-box">
-                                    <Link href="/#play-video">
-                                        <a
-                                            onClick={e => { e.preventDefault(); this.openModal() }}
-                                            className="video-btn"
-                                        >
-                                            <i className="pe-7s-play"></i>
-                                        </a>
+                                    <Link href="/#hotels">
+                                        <a className="btn btn-primary mr-0">Explore Now</a>
                                     </Link>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {typeof window !== 'undefined' && (
-                    <>
-                        <ModalVideo
-                            channel='youtube'
-                            isOpen={this.state.isOpen}
-                            videoId='_ysd-zHamjk'
-                            onClose={() => this.setState({ isOpen: false })}
-                        />
-                    </>
-                )}
-                {/* If you want to change the video need to update below videoID */}
+
 
             </>
         );
