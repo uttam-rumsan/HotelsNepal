@@ -16,12 +16,12 @@ class Footer extends Component {
                                     <div className="logo">
                                         <Link href="/">
                                             <a>
-                                                <img src="/images/logo.png" alt="image" />
+                                                <img src="/images/hotelsnepalogo.png" style={{ height: '50px' }} alt="Hotels in Nepal logo" />
                                             </a>
                                         </Link>
                                     </div>
 
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                    <p>We aim to provide complete information about the best hotels available in Nepal, including luxury hotels, boutique hotels, and budget hotels.</p>
 
                                     <ul className="social-links">
                                         <li>
@@ -121,14 +121,15 @@ class Footer extends Component {
                                     <h3>Get in Touch</h3>
 
                                     <ul className="get-in-touch">
-                                        <li><i className="icofont-home"></i> 2750 Quadra Street Victoria, Canada.</li>
+                                        <li><i className="icofont-home"></i> PrayagMarga-32, Kathmandu, Nepal</li>
                                         <li>
-                                            <i className="icofont-live-support"></i> 
-                                            <a href="tel:+324-9442-515">+324-9442-515</a>
+                                            <i className="icofont-live-support"></i>
+                                            <a href="tel:+324-9442-515">+977 9849214068</a>
                                         </li>
                                         <li>
-                                            <i className="icofont-envelope"></i> 
-                                            <a href="mailto:hello@pungent.com">hello@pungent.com</a>
+                                            <i className="icofont-envelope"></i>
+                                            <a href="mailto:hotelsinnepal123@gmail.com">hotelsinnepal123@gmail.com
+                                            </a>
                                         </li>
                                     </ul>
                                 </div>

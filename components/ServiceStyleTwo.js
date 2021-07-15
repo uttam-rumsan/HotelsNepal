@@ -50,11 +50,11 @@ class OurWorks extends Component {
     render() {
         return (
             <>
-                <section className="case-studies-area ptb-100">
+                <section id="hotels" className="case-studies-area ptb-100">
                     <div className="container-fluid">
                         <div className="section-title">
-                            <h2>Our Projects</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            <h2>Top Hotels in Nepal</h2>
+                            <p>We have listed the top ten hotels available in Nepal. You can have a<br />  quick overview and choose anyone. </p>
                         </div>
 
                         {this.state.display ? <OwlCarousel
