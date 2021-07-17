@@ -13,7 +13,7 @@ module.exports = [{
 {
     "title": "Bhaktapur Durbar",
     "image": "/images/places/bhaktapur.jpg",
-    "icon": "icofont-alarm",
+    "icon": "icofont-castle",
     "sub_head": "If you want to quench your thirst for nature, chitwan can be one of the best choice for you."
 },
 {
@@ -25,7 +25,7 @@ module.exports = [{
 {
     "title": "Lumbini",
     "image": "/images/places/lumbini.jpg",
-    "icon": "icofont-elephant-head",
+    "icon": "icofont-castle",
     "sub_head": "If you want to quench your thirst for nature, chitwan can be one of the best choice for you."
 },
 {
