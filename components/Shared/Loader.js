@@ -5,6 +5,7 @@ class Loader extends Component {
         return (
             <>
                 <div className={`preloader ${this.props.loading ? '' : 'preloader-deactivate'}`}>
+                    <div className="spinner-text">Hotels in Nepal is Loading...</div>
                     <div className="spinner"></div>
                 </div>
             </>

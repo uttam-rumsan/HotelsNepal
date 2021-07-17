@@ -6246,4 +6246,16 @@ Go Top CSS
   color: #ffffff;
   background: #008037;
 }
+
+/*================================================
+Custom CSS
+=================================================*/
+.spinner-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 57%;
+  margin: -80px auto 0;
+  color: white;
+}
 /*# sourceMappingURL=style.css.map */
