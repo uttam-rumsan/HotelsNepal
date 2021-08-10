@@ -38,6 +38,8 @@ export default class MyApp extends App {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <title>Hotels in Nepal</title>
+          <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5711539168274525"
+     crossorigin="anonymous"></script>
         </Head>
 
         <Component {...pageProps} />
