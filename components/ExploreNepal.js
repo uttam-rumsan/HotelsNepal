@@ -59,7 +59,7 @@ class ExploreNepal extends Component {
                                     <div className="services-section-title">
                                         <h2>Discover the Beauty of Nepal</h2>
                                         <div className="bar"></div>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+                                        <p>Nepal is rich in Natural Resources, Cultural Diversity and various adventureous activities. Come and Explore the beauty of Nepal.</p>
 
                                         <img src="/images/boudhanath.png" alt="Women" />
                                     </div>
@@ -73,7 +73,7 @@ class ExploreNepal extends Component {
                                         {...options}
                                     >
                                         {Places.map(d => (
-                                            <div className="single-services">
+                                            <div key={d.title} className="single-services">
                                                 <img src={d.image ? d.image : ""} alt={d.title ? d.title : ""} />
                                                 <div className="content">
                                                     <div className="icon">
